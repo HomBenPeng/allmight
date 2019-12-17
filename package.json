@@ -13,16 +13,16 @@
     "echo": "echo 'this is from allmight echo!'"
   },
   "dependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/runtime": "^7.7.6",
     "fs-extra": "^8.1.0",
-    "metro-react-native-babel-preset": "^0.57.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "symlink-dir": "^3.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.6",
     "babel-eslint": "^10.0.3",
+    "metro-react-native-babel-preset": "^0.57.0",
     "standard": "^14.3.1"
   },
   "standard": {
