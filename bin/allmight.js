@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 const { spawn } = require('child_process')
+const symlinkDir = require('symlink-dir')
+const path = require('path')
+const fs = require('fs-extra')
 
 const yarnRun = async (scriptName) => {
   return new Promise((resolve, reject) => {
@@ -36,7 +39,22 @@ const yarnRun = async (scriptName) => {
 }
 
 const start = async () => {
-  await yarnRun('echo')
+  try {
+    await fs.remove(path.join(__dirname, '..', 'src'))
+  } catch (err) {
+    console.error(err)
+  }
+
+  try {
+    await symlinkDir(
+      path.join(process.cwd(), 'src'),
+      path.join(__dirname, '..', 'src')
+    )
+  } catch (err) {
+    console.error(err)
+  }
+
+  await yarnRun('start')
 }
 
 start()
