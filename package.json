@@ -1,12 +1,16 @@
 {
   "name": "allmight",
   "version": "0.0.1",
-  "private": true,
+  "bin": {
+    "allmight": "./bin/allmight.js"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "lint": "standard"
+    "lint": "standard",
+    "build": "chmod 755 ./bin/*",
+    "echo": "echo 'this is from allmight echo!'"
   },
   "dependencies": {
     "react": "16.9.0",
