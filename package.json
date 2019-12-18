@@ -12,7 +12,7 @@
     "build": "chmod 755 ./bin/*",
     "echo": "echo 'this is from allmight echo!'",
     "prestart": "echo 'pre start!!!'",
-    "preios": "echo 'pre ios!!!'",
+    "preios": "echo 'pre ios!!!' && cd ios && pod install && cd ..",
     "preandroid": "echo 'pre android!!!'"
   },
   "dependencies": {
