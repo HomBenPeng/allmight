@@ -6,7 +6,7 @@
   },
   "scripts": {
     "android": "react-native run-android",
-    "ios": "cd ios && pod install && cd .. && react-native run-ios",
+    "ios": "react-native run-ios",
     "start": "react-native start --reset-cache",
     "lint": "standard",
     "build": "chmod 755 ./bin/*",
