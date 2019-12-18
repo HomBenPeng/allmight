@@ -18,10 +18,12 @@
     "appcenter": "^2.6.1",
     "appcenter-analytics": "^2.6.1",
     "appcenter-crashes": "^2.6.1",
+    "appcenter-push": "^2.6.1",
     "fs-extra": "^8.1.0",
     "metro-react-native-babel-preset": "^0.57.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-code-push": "^6.0.0",
     "symlink-dir": "^3.1.1"
   },
   "devDependencies": {
