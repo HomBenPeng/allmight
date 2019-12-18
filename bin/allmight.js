@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
 const { spawn } = require('child_process')
-// const symlinkDir = require('symlink-dir')
-// const path = require('path')
-// const fs = require('fs-extra')
+const arg = require('arg')
 
 const yarnRun = async (scriptName) => {
   return new Promise((resolve, reject) => {
@@ -38,26 +36,28 @@ const yarnRun = async (scriptName) => {
   })
 }
 
-const start = async () => {
-  // try {
-  //   await fs.remove(path.join(__dirname, '..', 'src'))
-  // } catch (err) {
-  //   console.error(err)
-  // }
+const start = async () => yarnRun('start')
+const ios = async () => yarnRun('ios')
+const android = async () => yarnRun('android')
 
-  // try {
-  //   await symlinkDir(
-  //     path.join(process.cwd(), 'src'),
-  //     path.join(__dirname, '..', 'src')
-  //   )
-  // } catch (err) {
-  //   console.error(err)
-  // }
+const args = arg({}, { permissive: true })
+console.log(args)
 
-  await yarnRun('start')
+let command = 'start'
+if (args._.length) {
+  command = args._[0]
+  if (command === 'start') {
+    start()
+  } else if (command === 'ios') {
+    ios()
+  } else if (command === 'android') {
+    android()
+  } else {
+    throw new Error('unknown allmight command.')
+  }
+} else {
+  start()
 }
-
-start()
 
 process.on('unhandledRejection', async err => {
   console.error('Unhandled rejection', err)

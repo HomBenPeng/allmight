@@ -5,16 +5,20 @@
     "allmight": "./bin/allmight.js"
   },
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android --reset-cache",
+    "ios": "react-native run-ios --reset-cache",
     "start": "react-native start --reset-cache",
     "lint": "standard",
     "build": "chmod 755 ./bin/*",
-    "echo": "echo 'this is from allmight echo!'"
+    "echo": "echo 'this is from allmight echo!'",
+    "prestart": "echo 'pre start!!!'",
+    "preios": "echo 'pre ios!!!'",
+    "preandroid": "echo 'pre android!!!'"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
     "@babel/runtime": "^7.7.6",
+    "arg": "^4.1.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "fs-extra": "^8.1.0",
     "metro-react-native-babel-preset": "^0.57.0",
