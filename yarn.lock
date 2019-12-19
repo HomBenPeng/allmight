@@ -662,6 +662,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@cs125/wait-until@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npm.taobao.org/@cs125/wait-until/download/@cs125/wait-until-0.0.3.tgz#957fc279121704845300dac47ee37a3b34c203d2"
+  integrity sha1-lX/CeRIXBIRTANrEfuN6OzTCA9I=
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -4777,6 +4782,13 @@ react-lifecycles-compat@^3.0.4:
 "react-native-beacons-manager@https://github.com/withcloud/react-native-beacons-manager":
   version "1.1.0"
   resolved "https://github.com/withcloud/react-native-beacons-manager#d6fbbe1679948a3e5d87c09ee821f5332e6546bc"
+
+react-native-bluetooth-status@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/react-native-bluetooth-status/download/react-native-bluetooth-status-1.4.0.tgz#c3f340c9440841ba72c28f65ef7b59a37f195853"
+  integrity sha1-w/NAyUQIQbpywo9l73tZo38ZWFM=
+  dependencies:
+    "@cs125/wait-until" "^0.0.3"
 
 react-native-code-push@^6.0.0:
   version "6.0.0"

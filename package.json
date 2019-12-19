@@ -29,6 +29,7 @@
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-beacons-manager": "https://github.com/withcloud/react-native-beacons-manager",
+    "react-native-bluetooth-status": "^1.4.0",
     "react-native-code-push": "^6.0.0",
     "react-native-gesture-handler": "^1.5.2",
     "react-native-reanimated": "^1.4.0",
