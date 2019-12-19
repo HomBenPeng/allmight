@@ -39,9 +39,9 @@ const yarnRun = async (scriptName, extraArgs = []) => {
   })
 }
 
-const start = async (...args) => yarnRun('start', args)
-const ios = async (...args) => yarnRun('ios', args)
-const android = async (...args) => yarnRun('android', args)
+const start = async (args) => yarnRun('start', args)
+const ios = async (args) => yarnRun('ios', args)
+const android = async (args) => yarnRun('android', args)
 
 const hackPackagerSh = () => {
   const nodeModulesPath = path.join(__dirname, '..', '..', '..', 'node_modules')
