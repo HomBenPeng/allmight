@@ -6,11 +6,11 @@ const symlinkDir = require('symlink-dir')
 const path = require('path')
 const fs = require('fs-extra')
 
-const yarnRun = async (scriptName) => {
+const yarnRun = async (scriptName, extraArgs = []) => {
   return new Promise((resolve, reject) => {
     const stream = spawn(
       process.platform === 'win32' ? 'yarn.cmd' : 'yarn',
-      ['run', scriptName],
+      ['run', scriptName, ...extraArgs],
       {
         cwd: __dirname,
         stdio: 'inherit',
@@ -39,9 +39,9 @@ const yarnRun = async (scriptName) => {
   })
 }
 
-const start = async () => yarnRun('start')
-const ios = async () => yarnRun('ios')
-const android = async () => yarnRun('android')
+const start = async (...args) => yarnRun('start', args)
+const ios = async (...args) => yarnRun('ios', args)
+const android = async (...args) => yarnRun('android', args)
 
 const hackPackagerSh = () => {
   const nodeModulesPath = path.join(__dirname, '..', '..', '..', 'node_modules')
@@ -76,13 +76,13 @@ const init = async () => {
   if (args._.length) {
     command = args._[0]
     if (command === 'start') {
-      start()
+      start(args._.slice(1))
     } else if (command === 'ios') {
       hackPackagerSh()
-      ios()
+      ios(args._.slice(1))
     } else if (command === 'android') {
       hackPackagerSh()
-      android()
+      android(args._.slice(1))
     } else {
       throw new Error('unknown allmight command.')
     }
