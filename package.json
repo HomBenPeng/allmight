@@ -13,7 +13,8 @@
     "echo": "echo 'this is from allmight echo!'",
     "prestart": "echo 'pre start!!!'",
     "preios": "echo 'pre ios!!!' && cd ios && pod install && cd ..",
-    "preandroid": "echo 'pre android!!!'"
+    "preandroid": "echo 'pre android!!!'",
+    "open-ios": "open ./ios/allmight.xcworkspace"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
