@@ -1006,14 +1006,14 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-appcenter-analytics@^2.6.1:
+appcenter-analytics@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/appcenter-analytics/-/appcenter-analytics-2.6.1.tgz#5b38caf8ece6f4356988154eeb03a90d81eece24"
   integrity sha512-+b1FJ3wxkixiERAwbplY5cswn2IFToJovesfv17Rt8rj5PO3K16XqXfSu3nkBFo7exxmMCU1e+OdL9+iYQWc4g==
   dependencies:
     appcenter "2.6.1"
 
-appcenter-crashes@^2.6.1:
+appcenter-crashes@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/appcenter-crashes/-/appcenter-crashes-2.6.1.tgz#b73a5491c9af4ea817a4f9d810a4131ce1232d41"
   integrity sha512-iPce1e/lAWGUDv/2hMbGBxUC40wIcTLBO4KcIBIHNd62JfLKsQ3SSnqXF3YDGzjgBLc0jWFmqasTgZJMr4PPaA==
@@ -1032,14 +1032,14 @@ appcenter-link-scripts@2.6.1:
     which "1.2.11"
     xcode "2.0.0"
 
-appcenter-push@^2.6.1:
+appcenter-push@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/appcenter-push/-/appcenter-push-2.6.1.tgz#3d8f4cce53ea90b3c7a136a7f1e779cc89223c90"
   integrity sha512-Yc8e330Gp9ZAxmumhEjsvRjLXYL+1YMjNdgjBz1EGf20asTxs/F1ucWIUIfnpxhmaFzHKN6e3ATKw5WzLfbpuA==
   dependencies:
     appcenter "2.6.1"
 
-appcenter@2.6.1, appcenter@^2.6.1:
+appcenter@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/appcenter/-/appcenter-2.6.1.tgz#1d96e603ecfc5f0e7e34d580a19dd784f085802f"
   integrity sha512-2o6wZCk1v80Tq4AaXM7i4i9SibFFGesezRtb8fTqQjqSYqrP+umxoLxvu37UwGD7njRc599CALmNvEgbmAwi0g==
@@ -4589,7 +4589,7 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-react-native-code-push@^6.0.0:
+react-native-code-push@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/react-native-code-push/-/react-native-code-push-6.0.0.tgz#4b91159b3ed9495fd8cbf39b07a93e921f810420"
   integrity sha512-CjAAQg0/RnZQaU1mzs3dMEzbiNTglwpXI6UrJKbsw3+Y1PAdmtqkscWAFyphFc80acMZzaYxxEzMQSwcmIOECQ==

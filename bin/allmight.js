@@ -43,6 +43,16 @@ const start = async () => yarnRun('start')
 const ios = async () => yarnRun('ios')
 const android = async () => yarnRun('android')
 
+const hackPackagerSh = () => {
+  const nodeModulesPath = path.join(__dirname, '..', '..', '..', 'node_modules')
+  const shPath = path.join(nodeModulesPath, 'react-native', 'scripts', 'packager.sh')
+  if (fs.existsSync(nodeModulesPath)) {
+    let data = fs.readFileSync(shPath, 'utf-8')
+    data = data.replace('cd "$PROJECT_ROOT" || exit', 'cd "$PROJECT_ROOT/node_modules/allmight" || exit')
+    fs.writeFileSync(shPath, data, 'utf-8')
+  }
+}
+
 const args = arg({}, { permissive: true })
 console.log(args)
 
@@ -68,8 +78,10 @@ const init = async () => {
     if (command === 'start') {
       start()
     } else if (command === 'ios') {
+      hackPackagerSh()
       ios()
     } else if (command === 'android') {
+      hackPackagerSh()
       android()
     } else {
       throw new Error('unknown allmight command.')
