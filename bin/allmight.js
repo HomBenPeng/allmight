@@ -42,6 +42,7 @@ const yarnRun = async (scriptName, extraArgs = []) => {
 const start = async (args) => yarnRun('start', args)
 const ios = async (args) => yarnRun('ios', args)
 const android = async (args) => yarnRun('android', args)
+const openIOS = async (args) => yarnRun('open-ios', args)
 
 const hackPackagerSh = () => {
   const nodeModulesPath = path.join(__dirname, '..', '..', '..', 'node_modules')
@@ -83,6 +84,8 @@ const init = async () => {
     } else if (command === 'android') {
       hackPackagerSh()
       android(args._.slice(1))
+    } else if (command === 'open-ios') {
+      openIOS(args._.slice(1))
     } else {
       throw new Error('unknown allmight command.')
     }
