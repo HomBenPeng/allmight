@@ -76,18 +76,44 @@ const init = async () => {
     }
   }
 
+  let newName
+  let newBundleID
+  const appJsonPath = fs.existsSync(path.join(__dirname, '..', '..', '..', 'src', 'app.json'))
+  if (appJsonPath) {
+    try {
+      const appJson = require(appJsonPath)
+      console.log(appJson)
+      newName = appJson.name
+      newBundleID = appJson.newBundleID
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   let command = 'start'
   if (args._.length) {
     command = args._[0]
     if (command === 'start') {
+      if (newName && newBundleID) {
+        await rename(newName, newBundleID)
+      }
       start(args._.slice(1))
     } else if (command === 'ios') {
-      hackPackagerSh()
+      await hackPackagerSh()
+      if (newName && newBundleID) {
+        await rename(newName, newBundleID)
+      }
       ios(args._.slice(1))
     } else if (command === 'android') {
-      hackPackagerSh()
+      await hackPackagerSh()
+      if (newName && newBundleID) {
+        await rename(newName, newBundleID)
+      }
       android(args._.slice(1))
     } else if (command === 'open-ios') {
+      if (newName && newBundleID) {
+        await rename(newName, newBundleID)
+      }
       openIOS(args._.slice(1))
     } else if (command === 'rename') {
       await rename(...args._.slice(1))
