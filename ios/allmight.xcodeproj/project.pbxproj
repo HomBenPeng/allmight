@@ -39,7 +39,7 @@
 		B3F55D61ABEAC8DB05973952 /* libPods-allmightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CADBF21948627BD3D36FF3 /* libPods-allmightTests.a */; };
 		CAEAB9CDA3E1456FB025A315 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1F4D896B4B1B968D6A29 /* MaterialIcons.ttf */; };
 		D05EC7FCC6C65ABFFC3B4692 /* libPods-allmight-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A84BFBFAE4285075C915D6FD /* libPods-allmight-tvOS.a */; };
-		E9287C9B23AB67F700330025 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9287C9A23AB67F700330025 /* GoogleService-Info.plist */; };
+		E93EBDE223ACA3F700B15663 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E93EBDE123ACA3F700B15663 /* GoogleService-Info.plist */; };
 		E940D8B923A9F23400E4499F /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E940D8B823A9F23400E4499F /* AppCenter-Config.plist */; };
 /* End PBXBuildFile section */
 
@@ -102,9 +102,9 @@
 		C8D72E5068BD4BA99F663DD9 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		C8E4ABA29C48482480C14D2D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		CB71A2C84DFEC520693CE225 /* Pods-allmightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allmightTests.release.xcconfig"; path = "Target Support Files/Pods-allmightTests/Pods-allmightTests.release.xcconfig"; sourceTree = "<group>"; };
-		E9287C9A23AB67F700330025 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "allmight/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E93EBDE123ACA3F700B15663 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E93EBDE323ACA89800B15663 /* allmight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = allmight.entitlements; path = allmight/allmight.entitlements; sourceTree = "<group>"; };
 		E940D8B823A9F23400E4499F /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "allmight/AppCenter-Config.plist"; sourceTree = "<group>"; };
-		E9BC49CC23AC74C60064F45D /* allmight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = allmight.entitlements; path = allmight/allmight.entitlements; sourceTree = "<group>"; };
 		ED1B90FFB921421C9A3B3286 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -194,8 +194,8 @@
 		13B07FAE1A68108700A75B9A /* allmight */ = {
 			isa = PBXGroup;
 			children = (
-				E9BC49CC23AC74C60064F45D /* allmight.entitlements */,
-				E9287C9A23AB67F700330025 /* GoogleService-Info.plist */,
+				E93EBDE123ACA3F700B15663 /* GoogleService-Info.plist */,
+				E93EBDE323ACA89800B15663 /* allmight.entitlements */,
 				E940D8B823A9F23400E4499F /* AppCenter-Config.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -442,7 +442,7 @@
 				408C243B8A0A41978DB15C54 /* Ionicons.ttf in Resources */,
 				2BC69D66021E4226812F3F29 /* MaterialCommunityIcons.ttf in Resources */,
 				CAEAB9CDA3E1456FB025A315 /* MaterialIcons.ttf in Resources */,
-				E9287C9B23AB67F700330025 /* GoogleService-Info.plist in Resources */,
+				E93EBDE223ACA3F700B15663 /* GoogleService-Info.plist in Resources */,
 				2299D62F32C741178F8D052F /* Octicons.ttf in Resources */,
 				7F343C7044DB4C108BEA2F7E /* SimpleLineIcons.ttf in Resources */,
 				78413F6C956143E2926E3903 /* Zocial.ttf in Resources */,
