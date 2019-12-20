@@ -96,23 +96,27 @@ const init = async () => {
     if (command === 'start') {
       if (newName && newBundleID) {
         await rename(newName, newBundleID)
+        yarnRun('postrename')
       }
       start(args._.slice(1))
     } else if (command === 'ios') {
       await hackPackagerSh()
       if (newName && newBundleID) {
         await rename(newName, newBundleID)
+        yarnRun('postrename')
       }
       ios(args._.slice(1))
     } else if (command === 'android') {
       await hackPackagerSh()
       if (newName && newBundleID) {
         await rename(newName, newBundleID)
+        yarnRun('postrename')
       }
       android(args._.slice(1))
     } else if (command === 'open-ios') {
       if (newName && newBundleID) {
         await rename(newName, newBundleID)
+        yarnRun('postrename')
       }
       openIOS(args._.slice(1))
     } else if (command === 'rename') {
