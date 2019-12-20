@@ -59,7 +59,7 @@ const args = arg({}, { permissive: true })
 console.log(args)
 
 const init = async () => {
-  if (path.join(__dirname, '..', '..', '..', 'node_modules')) {
+  if (fs.existsSync(path.join(__dirname, '..', '..', '..', 'node_modules'))) {
     try {
       await fs.remove(path.join(__dirname, '..', 'node_modules'))
     } catch (err) {
