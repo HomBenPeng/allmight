@@ -15,7 +15,7 @@
     "preios": "echo 'pre ios!!!' && cd ios && pod install && cd ..",
     "preandroid": "echo 'pre android!!!'",
     "open-ios": "open ./ios/allmight.xcworkspace",
-    "postrename": "cd ios && pod install && cd .. && watchman watch-del-all"
+    "postrename": "cd ios && pod install && cd .. && watchman watch-del-all && react-native start --reset-cache"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
