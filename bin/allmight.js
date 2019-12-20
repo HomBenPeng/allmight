@@ -90,7 +90,8 @@ const init = async () => {
     } else if (command === 'open-ios') {
       openIOS(args._.slice(1))
     } else if (command === 'rename') {
-      rename(...args._.slice(1))
+      await rename(...args._.slice(1))
+      yarnRun('postrename')
     } else {
       throw new Error('unknown allmight command.')
     }

@@ -14,7 +14,8 @@
     "prestart": "echo 'pre start!!!'",
     "preios": "echo 'pre ios!!!' && cd ios && pod install && cd ..",
     "preandroid": "echo 'pre android!!!'",
-    "open-ios": "open ./ios/allmight.xcworkspace"
+    "open-ios": "open ./ios/allmight.xcworkspace",
+    "postrename": "cd ios && pod install && cd .. && watchman watch-del-all && yarn start"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
