@@ -59,19 +59,21 @@ const args = arg({}, { permissive: true })
 console.log(args)
 
 const init = async () => {
-  try {
-    await fs.remove(path.join(__dirname, '..', 'node_modules'))
-  } catch (err) {
-    console.error(err)
-  }
+  if (path.join(__dirname, '..', '..', '..', 'node_modules')) {
+    try {
+      await fs.remove(path.join(__dirname, '..', 'node_modules'))
+    } catch (err) {
+      console.error(err)
+    }
 
-  try {
-    await symlinkDir(
-      path.join(process.cwd(), 'node_modules'),
-      path.join(__dirname, '..', 'node_modules')
-    )
-  } catch (err) {
-    console.error(err)
+    try {
+      await symlinkDir(
+        path.join(process.cwd(), 'node_modules'),
+        path.join(__dirname, '..', 'node_modules')
+      )
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   let command = 'start'
