@@ -857,6 +857,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/auth@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.npm.taobao.org/@react-native-firebase/auth/download/@react-native-firebase/auth-6.2.0.tgz#f31438c1b103052b1e70840b42d8bba785af603d"
+  integrity sha1-8xQ4wbEDBSsecIQLQti7p4WvYD0=
+
 "@react-navigation/core@^3.5.1":
   version "3.5.1"
   resolved "https://registry.npm.taobao.org/@react-navigation/core/download/@react-navigation/core-3.5.1.tgz#7a2339fca3496979305fb3a8ab88c2ca8d8c214d"

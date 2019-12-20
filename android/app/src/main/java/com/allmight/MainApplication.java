@@ -16,6 +16,7 @@ import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import io.invertase.firebase.auth.ReactNativeFirebaseAuthPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
