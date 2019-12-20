@@ -4303,7 +4303,7 @@ open@^6.2.0:
   dependencies:
     is-wsl "^1.1.0"
 
-opencollective-postinstall@^2.0.2:
+opencollective-postinstall@^2.0.0, opencollective-postinstall@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npm.taobao.org/opencollective-postinstall/download/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
   integrity sha1-Vlfxvt5ptuM6RZObBh61PTxsOok=
@@ -4817,6 +4817,14 @@ react-native-easy-grid@0.2.2:
   integrity sha1-8L4zYgvh6+LSKVkY61iwon6Ccqs=
   dependencies:
     lodash "^4.17.15"
+
+react-native-firebase@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.npm.taobao.org/react-native-firebase/download/react-native-firebase-5.6.0.tgz#6f6123f53cb73477915dd55c55f3e1de91db38d2"
+  integrity sha1-b2Ej9Ty3NHeRXdVcVfPh3pHbONI=
+  dependencies:
+    opencollective-postinstall "^2.0.0"
+    prop-types "^15.7.2"
 
 react-native-gesture-handler@^1.5.2:
   version "1.5.2"

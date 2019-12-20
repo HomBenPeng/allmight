@@ -40,6 +40,7 @@
 		CAEAB9CDA3E1456FB025A315 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E1F4D896B4B1B968D6A29 /* MaterialIcons.ttf */; };
 		D05EC7FCC6C65ABFFC3B4692 /* libPods-allmight-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A84BFBFAE4285075C915D6FD /* libPods-allmight-tvOS.a */; };
 		E940D8B923A9F23400E4499F /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E940D8B823A9F23400E4499F /* AppCenter-Config.plist */; };
+		E9BA8EF523ACB901003E7EAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9BA8EF423ACB901003E7EAD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		C8E4ABA29C48482480C14D2D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		CB71A2C84DFEC520693CE225 /* Pods-allmightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allmightTests.release.xcconfig"; path = "Target Support Files/Pods-allmightTests/Pods-allmightTests.release.xcconfig"; sourceTree = "<group>"; };
 		E940D8B823A9F23400E4499F /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "allmight/AppCenter-Config.plist"; sourceTree = "<group>"; };
+		E9BA8EF423ACB901003E7EAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9BA8EF623ACBCAE003E7EAD /* allmight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = allmight.entitlements; path = allmight/allmight.entitlements; sourceTree = "<group>"; };
 		ED1B90FFB921421C9A3B3286 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -191,6 +194,8 @@
 		13B07FAE1A68108700A75B9A /* allmight */ = {
 			isa = PBXGroup;
 			children = (
+				E9BA8EF623ACBCAE003E7EAD /* allmight.entitlements */,
+				E9BA8EF423ACB901003E7EAD /* GoogleService-Info.plist */,
 				E940D8B823A9F23400E4499F /* AppCenter-Config.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -363,6 +368,14 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = F5FS6TN552;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -428,6 +441,7 @@
 				408C243B8A0A41978DB15C54 /* Ionicons.ttf in Resources */,
 				2BC69D66021E4226812F3F29 /* MaterialCommunityIcons.ttf in Resources */,
 				CAEAB9CDA3E1456FB025A315 /* MaterialIcons.ttf in Resources */,
+				E9BA8EF523ACB901003E7EAD /* GoogleService-Info.plist in Resources */,
 				2299D62F32C741178F8D052F /* Octicons.ttf in Resources */,
 				7F343C7044DB4C108BEA2F7E /* SimpleLineIcons.ttf in Resources */,
 				78413F6C956143E2926E3903 /* Zocial.ttf in Resources */,
@@ -769,6 +783,7 @@
 			baseConfigurationReference = 6F06E2E638105360E245C962 /* Pods-allmight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = allmight/allmight.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = F5FS6TN552;
@@ -779,7 +794,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.allmight;
 				PRODUCT_NAME = allmight;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -790,6 +805,7 @@
 			baseConfigurationReference = 8226CC4CD5951A0366D411B9 /* Pods-allmight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = allmight/allmight.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F5FS6TN552;
 				INFOPLIST_FILE = allmight/Info.plist;
@@ -799,7 +815,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.allmight;
 				PRODUCT_NAME = allmight;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

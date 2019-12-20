@@ -5,10 +5,21 @@ import {
   Alert
 } from 'react-native'
 import codePush from 'react-native-code-push'
+import firebase from 'react-native-firebase'
 
 class App extends Component {
   state = {
     progress: ''
+  }
+
+  componentDidMount = async () => {
+    const fcmToken = await firebase.messaging().getToken()
+    if (fcmToken) {
+      console.log('fcmToken: ' + fcmToken)
+      // user has a device token
+    } else {
+      // user doesn't have a device token yet
+    }
   }
 
   codePushStatusDidChange (status) {
