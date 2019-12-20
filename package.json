@@ -11,11 +11,11 @@
     "lint": "standard",
     "build": "chmod 755 ./bin/*",
     "echo": "echo 'this is from allmight echo!'",
-    "prestart": "echo 'pre start!!!'",
-    "preios": "echo 'pre ios!!!' && cd ios && pod install && cd ..",
-    "preandroid": "echo 'pre android!!!'",
+    "prestart": "echo 'pre start!!!' && watchman watch-del-all",
+    "preios": "echo 'pre ios!!!' && cd ios && pod install && cd .. && watchman watch-del-all",
+    "preandroid": "echo 'pre android!!!' && watchman watch-del-all",
     "open-ios": "open ./ios/allmight.xcworkspace",
-    "postrename": "cd ios && pod install && cd .. && watchman watch-del-all && react-native start --reset-cache"
+    "postrename": "cd ios && pod install && cd .. && watchman watch-del-all"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
