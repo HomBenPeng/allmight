@@ -79,7 +79,7 @@ const init = async () => {
   let newName
   let newBundleID
   const appJsonPath = path.join(__dirname, '..', '..', '..', 'src', 'app.json')
-  if (appJsonPath) {
+  if (fs.existsSync(appJsonPath)) {
     try {
       const appJson = require(appJsonPath)
       console.log(appJson)
