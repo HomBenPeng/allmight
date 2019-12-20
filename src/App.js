@@ -14,6 +14,14 @@ import firebase from 'react-native-firebase'
 
 async function googleLogin () {
   try {
+    try {
+      const isSignedIn = await GoogleSignin.isSignedIn()
+      if (isSignedIn) {
+        // await GoogleSignin.revokeAccess()
+        await GoogleSignin.signOut()
+      }
+    } catch (error) {}
+
     // add any configuration settings here:
     await GoogleSignin.configure({
       webClientId: '56658150283-v4ga3cbnniicuis9j3eil5uutiaafaol.apps.googleusercontent.com',
@@ -31,7 +39,7 @@ async function googleLogin () {
 
     console.warn(JSON.stringify(firebaseUserCredential.user.toJSON()))
   } catch (e) {
-    console.error(e)
+    console.warn(e)
   }
 }
 
