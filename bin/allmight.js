@@ -78,7 +78,7 @@ const init = async () => {
 
   let newName
   let newBundleID
-  const appJsonPath = fs.existsSync(path.join(__dirname, '..', '..', '..', 'src', 'app.json'))
+  const appJsonPath = path.join(__dirname, '..', '..', '..', 'src', 'app.json')
   if (appJsonPath) {
     try {
       const appJson = require(appJsonPath)
