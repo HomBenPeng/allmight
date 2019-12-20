@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "56658150283",
+    "firebase_url": "https://allmight-855c9.firebaseio.com",
+    "project_id": "allmight-855c9",
+    "storage_bucket": "allmight-855c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56658150283:android:293daa5df125a7418da58e",
+        "android_client_info": {
+          "package_name": "dev.allmight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56658150283-14990e60taujjhsobmlc96qjji07au04.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.allmight",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "56658150283-v4ga3cbnniicuis9j3eil5uutiaafaol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALVGqa66uj_tcobk7Yt9sOUHu0a31Avuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56658150283-v4ga3cbnniicuis9j3eil5uutiaafaol.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "56658150283-pjufivb11cju9acbbk1v83ch99743ako.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.allmight"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

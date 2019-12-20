@@ -16,10 +16,13 @@ async function googleLogin () {
   try {
     // add any configuration settings here:
     await GoogleSignin.configure({
+      webClientId: '56658150283-v4ga3cbnniicuis9j3eil5uutiaafaol.apps.googleusercontent.com',
       forceConsentPrompt: true
     })
 
     const data = await GoogleSignin.signIn()
+
+    console.log('!!!data', JSON.stringify(data))
 
     // create a new firebase credential with the token
     const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken)
