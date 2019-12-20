@@ -1,4 +1,4 @@
-package com.allmight;
+package dev.allmight;
 
 import com.facebook.react.ReactActivity;
 

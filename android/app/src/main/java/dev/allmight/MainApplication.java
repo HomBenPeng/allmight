@@ -1,4 +1,4 @@
-package com.allmight;
+package dev.allmight;
 
 import android.app.Application;
 import android.content.Context;
