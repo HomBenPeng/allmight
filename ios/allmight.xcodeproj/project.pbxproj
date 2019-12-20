@@ -20,6 +20,7 @@
 		65F3E7500CAA8219875B9CD5 /* libPods-allmight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA8FB2B21A5416508206B8B /* libPods-allmight.a */; };
 		B3F55D61ABEAC8DB05973952 /* libPods-allmightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CADBF21948627BD3D36FF3 /* libPods-allmightTests.a */; };
 		D05EC7FCC6C65ABFFC3B4692 /* libPods-allmight-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A84BFBFAE4285075C915D6FD /* libPods-allmight-tvOS.a */; };
+		D8350FA723ACBF910041D846 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8350FA623ACBF910041D846 /* GoogleService-Info.plist */; };
 		D88E906223AB1AAC00C5B7D7 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88E906123AB1AAC00C5B7D7 /* AppCenter-Config.plist */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		BEA8FB2B21A5416508206B8B /* libPods-allmight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-allmight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76DFEAC73BFE539B8A7E10C /* Pods-allmight-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allmight-tvOS.release.xcconfig"; path = "Target Support Files/Pods-allmight-tvOS/Pods-allmight-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB71A2C84DFEC520693CE225 /* Pods-allmightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allmightTests.release.xcconfig"; path = "Target Support Files/Pods-allmightTests/Pods-allmightTests.release.xcconfig"; sourceTree = "<group>"; };
+		D8350FA623ACBF910041D846 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D88E906123AB1AAC00C5B7D7 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "allmight/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -127,6 +129,7 @@
 		13B07FAE1A68108700A75B9A /* allmight */ = {
 			isa = PBXGroup;
 			children = (
+				D8350FA623ACBF910041D846 /* GoogleService-Info.plist */,
 				D88E906123AB1AAC00C5B7D7 /* AppCenter-Config.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -232,6 +235,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				2C73C169489EAEE51F6F934E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D8350FA723ACBF910041D846 /* GoogleService-Info.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				D88E906223AB1AAC00C5B7D7 /* AppCenter-Config.plist in Resources */,
 			);
@@ -380,6 +385,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		2C73C169489EAEE51F6F934E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-allmight/Pods-allmight-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-allmight/Pods-allmight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
