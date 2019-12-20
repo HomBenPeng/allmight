@@ -4,10 +4,33 @@ import {
   Text,
   Alert,
   Platform,
-  PermissionsAndroid
+  PermissionsAndroid,
+  Button
 } from 'react-native'
 import codePush from 'react-native-code-push'
 import Beacons from 'react-native-beacons-manager'
+import auth from '@react-native-firebase/auth'
+import { GoogleSignin } from '@react-native-community/google-signin'
+
+async function googleLogin () {
+  try {
+    // add any configuration settings here:
+    await GoogleSignin.configure({
+      forceConsentPrompt: true
+    })
+
+    const data = await GoogleSignin.signIn()
+
+    // create a new firebase credential with the token
+    const credential = auth.GoogleAuthProvider.credential(data.idToken, data.accessToken)
+    // login with credential
+    const firebaseUserCredential = await auth().signInWithCredential(credential)
+
+    console.log(JSON.stringify(firebaseUserCredential.user.toJSON()))
+  } catch (e) {
+    console.log(e)
+  }
+}
 
 class App extends Component {
   state = {
@@ -89,6 +112,14 @@ class App extends Component {
         }
       )
     }
+
+    function onAuthStateChanged (user) {
+      if (user) {
+        Alert.alert(JSON.stringify(user))
+      }
+    }
+
+    this.subscriber = auth().onAuthStateChanged(onAuthStateChanged)
   }
 
   checkLocationPermission = async () => {
@@ -138,6 +169,10 @@ class App extends Component {
     if (this.beaconsDidRangeEvent) {
       this.beaconsDidRangeEvent.remove()
     }
+
+    if (this.subscriber) {
+      this.subscriber()
+    }
   }
 
   render () {
@@ -146,6 +181,7 @@ class App extends Component {
         <SafeAreaView>
           <Text>Code Push</Text>
           <Text>{this.state.progress}</Text>
+          <Button title='googleLogin' onPress={googleLogin} />
         </SafeAreaView>
       </>
     )
