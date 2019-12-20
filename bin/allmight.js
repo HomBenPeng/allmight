@@ -5,6 +5,7 @@ const arg = require('arg')
 const symlinkDir = require('symlink-dir')
 const path = require('path')
 const fs = require('fs-extra')
+const rename = require('../lib/rename')
 
 const yarnRun = async (scriptName, extraArgs = []) => {
   return new Promise((resolve, reject) => {
@@ -86,6 +87,8 @@ const init = async () => {
       android(args._.slice(1))
     } else if (command === 'open-ios') {
       openIOS(args._.slice(1))
+    } else if (command === 'rename') {
+      rename(...args._.slice(1))
     } else {
       throw new Error('unknown allmight command.')
     }

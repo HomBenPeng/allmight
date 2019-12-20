@@ -25,12 +25,16 @@
     "appcenter-push": "2.6.1",
     "arg": "^4.1.2",
     "babel-plugin-module-resolver": "^4.0.0",
+    "cheerio": "^0.22.0",
+    "colors": "^1.1.2",
     "fs-extra": "^8.1.0",
     "metro-react-native-babel-preset": "^0.57.0",
+    "node-replace": "^0.3.3",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-beacons-manager": "withcloud/react-native-beacons-manager",
     "react-native-code-push": "6.0.0",
+    "shelljs": "^0.7.7",
     "symlink-dir": "^3.1.1"
   },
   "devDependencies": {
