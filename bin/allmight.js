@@ -84,7 +84,7 @@ const init = async () => {
       const appJson = require(appJsonPath)
       console.log(appJson)
       newName = appJson.name
-      newBundleID = appJson.newBundleID
+      newBundleID = appJson.bundleID
     } catch (err) {
       console.error(err)
     }
