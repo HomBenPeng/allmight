@@ -8,7 +8,6 @@ import io.invertase.firebase.RNFirebasePackage;
 import com.solinor.bluetoothstatus.RNBluetoothManagerPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
 import com.mackentoch.beaconsandroid.BeaconsAndroidPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
