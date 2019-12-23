@@ -5,7 +5,8 @@ import {
   Alert,
   Platform,
   PermissionsAndroid,
-  Button
+  Button,
+  TextInput
 } from 'react-native'
 import codePush from 'react-native-code-push'
 import Beacons from 'react-native-beacons-manager'
@@ -52,9 +53,24 @@ async function googleLogin () {
   }
 }
 
+async function smsLogin (phoneNum) {
+  this.confirmResult = await firebase.auth().signInWithPhoneNumber(phoneNum)
+  console.log('confirmResult: ' + JSON.stringify(this.confirmResult))
+}
+
+async function setConfirm (verificationCode) {
+  this.confirmResult.confirm(verificationCode)
+    .then(user => {
+      console.log('user: ' + JSON.stringify(user))
+    })
+    .catch(error => console.log('error: ' + JSON.stringify(error)))
+}
+
 class App extends Component {
   state = {
-    progress: ''
+    progress: '',
+    phoneText: '',
+    confirmText: ''
   }
 
   codePushStatusDidChange (status) {
@@ -198,6 +214,20 @@ class App extends Component {
           <Text>Code Push</Text>
           <Text>{this.state.progress}</Text>
           <Button title='googleLogin' onPress={googleLogin} />
+          <TextInput
+            placeholder='電話'
+            style={{ height: 40 }}
+            onChangeText={(text) => this.setState({ phoneText: text })}
+            value={this.state.phoneText}
+          />
+          <Button title='SMSLogin' onPress={() => smsLogin(this.state.phoneText)} />
+          <TextInput
+            placeholder='請輸入'
+            style={{ height: 40 }}
+            onChangeText={(text) => this.setState({ confirmText: text })}
+            value={this.state.confirmText}
+          />
+          <Button title='set Confirm Code' onPress={() => setConfirm(this.state.confirmText)} />
         </SafeAreaView>
       </>
     )
