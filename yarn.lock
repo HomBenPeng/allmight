@@ -828,6 +828,11 @@
     wcwidth "^1.0.1"
     ws "^1.1.0"
 
+"@react-native-community/netinfo@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.npm.taobao.org/@react-native-community/netinfo/download/@react-native-community/netinfo-5.0.1.tgz#e3486374d7319bf7f9027648fd6fb5715c0b168f"
+  integrity sha1-40hjdNcxm/f5AnZI/W+1cVwLFo8=
+
 "@react-navigation/core@^3.5.1":
   version "3.5.1"
   resolved "https://registry.npm.taobao.org/@react-navigation/core/download/@react-navigation/core-3.5.1.tgz#7a2339fca3496979305fb3a8ab88c2ca8d8c214d"
