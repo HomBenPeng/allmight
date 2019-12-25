@@ -13,6 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -34,6 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           packages.add(new RNFirebaseAuthPackage());
+          packages.add(new RNFirebaseMessagingPackage());
           return packages;
         }
 
