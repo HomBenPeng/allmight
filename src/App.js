@@ -164,6 +164,14 @@ class App extends Component {
       } catch (error) {
         console.log('error', error)
       }
+
+      firebase.notifications().onNotification((notification) => {
+        notification.android.setChannelId('insider').setSound('default')
+        firebase.notifications().displayNotification(notification)
+        const { title, body } = notification
+        console.log('title: ' + title)
+        console.log('body: ' + body)
+      })
     }
     if (!this.messagingEnabled) {
       try {
