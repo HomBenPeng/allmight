@@ -69,6 +69,7 @@
 		CB71A2C84DFEC520693CE225 /* Pods-allmightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-allmightTests.release.xcconfig"; path = "Target Support Files/Pods-allmightTests/Pods-allmightTests.release.xcconfig"; sourceTree = "<group>"; };
 		D88E906123AB1AAC00C5B7D7 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "allmight/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		D8ED720723B0566E0080631B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "allmight/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E95035F423B341EA004F269F /* allmight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = allmight.entitlements; path = allmight/allmight.entitlements; sourceTree = "<group>"; };
 		E9578D2423B21B99002776A6 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		E9578D2523B21B99002776A6 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		E9578D2623B21B99002776A6 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		E9578D3123B21B99002776A6 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		E9578D3223B21B99002776A6 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		E9578D3323B21B9A002776A6 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		E9EBA18423B309520068CE46 /* allmightRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = allmightRelease.entitlements; path = allmight/allmightRelease.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +146,8 @@
 		13B07FAE1A68108700A75B9A /* allmight */ = {
 			isa = PBXGroup;
 			children = (
+				E95035F423B341EA004F269F /* allmight.entitlements */,
+				E9EBA18423B309520068CE46 /* allmightRelease.entitlements */,
 				E9578D2323B21ABA002776A6 /* Fonts */,
 				D8ED720723B0566E0080631B /* GoogleService-Info.plist */,
 				D88E906123AB1AAC00C5B7D7 /* AppCenter-Config.plist */,
@@ -729,6 +733,7 @@
 			baseConfigurationReference = 6F06E2E638105360E245C962 /* Pods-allmight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = allmight/allmight.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = F5FS6TN552;
@@ -750,6 +755,7 @@
 			baseConfigurationReference = 8226CC4CD5951A0366D411B9 /* Pods-allmight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = allmight/allmightRelease.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F5FS6TN552;
 				INFOPLIST_FILE = allmight/Info.plist;

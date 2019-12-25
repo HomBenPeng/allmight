@@ -12,35 +12,7 @@ import codePush from 'react-native-code-push'
 import Beacons from 'react-native-beacons-manager'
 import { GoogleSignin } from 'react-native-google-signin'
 import firebase from 'react-native-firebase'
-import Footer from '../components/footer'
-import { createStackNavigator } from 'react-navigation-stack'
-import { createBottomTabNavigator } from 'react-navigation-tabs'
-import { createAppContainer } from 'react-navigation'
-import Page1 from '../screen/page1'
-import Page2 from '../screen/page2'
-const tabNavigator = createBottomTabNavigator(
-  {
-    Page1: { screen: Page1 },
-    Page2: { screen: Page2 }
-  },
-  {
-    initialRouteName: 'Page1',
-    headerMode: 'none',
-    tabBarComponent: Footer
-  }
-)
 
-const AppNavigator = createStackNavigator(
-  {
-    Tabs: tabNavigator
-  },
-  {
-    initialRouteName: 'Tabs',
-    headerMode: 'none'
-  }
-)
-
-const AppContainer = createAppContainer(AppNavigator)
 async function googleLogin () {
   try {
     // add any configuration settings here:
@@ -132,7 +104,7 @@ class App extends Component {
     })
   }
 
-  componentDidMount () {
+  componentDidMount = async () => {
     const region = {
       identifier: '',
       uuid: 'b5b182c7-eab1-4988-aa99-b5c1517008d9'
@@ -163,7 +135,7 @@ class App extends Component {
         'beaconsDidRange',
         ({ region: { identifier, uuid }, beacons }) => {
           // do here anything you need (ex: setting state...)
-          console.log('beaconsDidRange these beacons: ', beacons)
+          // console.log('beaconsDidRange these beacons: ', beacons)
         }
       )
     }
@@ -178,8 +150,32 @@ class App extends Component {
     }
 
     this.unsubscriber = firebase.auth().onAuthStateChanged((user) => {
-      Alert.alert(JSON.stringify(user))
+      // Alert.alert(JSON.stringify(user))
     })
+
+    this.messagingEnabled = await firebase.messaging().hasPermission()
+    console.log('this.messagingEnabled222', this.messagingEnabled)
+    if (this.messagingEnabled) {
+      try {
+        console.log('this.messagingEnabled111000', this.messagingEnabled)
+        const token = await firebase.messaging().getToken()
+        console.log('token', token)
+        Alert.alert(token)
+      } catch (error) {
+        console.log('error', error)
+      }
+    }
+    if (!this.messagingEnabled) {
+      try {
+        await firebase.messaging().requestPermission()
+        console.log('User has authorised')
+        const token = await firebase.messaging().getToken()
+        console.log('token', token)
+        Alert.alert(token)
+      } catch (error) {
+        console.log('User has rejected permissions')
+      }
+    }
   }
 
   checkLocationPermission = async () => {
@@ -237,28 +233,27 @@ class App extends Component {
 
   render () {
     return (
-      // <>
-      //   <SafeAreaView>
-      //     <Text>Code Push</Text>
-      //     <Text>{this.state.progress}</Text>
-      //     <Button title='googleLogin' onPress={googleLogin} />
-      //     <TextInput
-      //       placeholder='電話'
-      //       style={{ height: 40 }}
-      //       onChangeText={(text) => this.setState({ phoneText: text })}
-      //       value={this.state.phoneText}
-      //     />
-      //     <Button title='SMSLogin' onPress={() => smsLogin(this.state.phoneText)} />
-      //     <TextInput
-      //       placeholder='請輸入'
-      //       style={{ height: 40 }}
-      //       onChangeText={(text) => this.setState({ confirmText: text })}
-      //       value={this.state.confirmText}
-      //     />
-      //     <Button title='set Confirm Code' onPress={() => setConfirm(this.state.confirmText)} />
-      //   </SafeAreaView>
-      // </>
-      <AppContainer />
+      <>
+        <SafeAreaView>
+          <Text>Code Push</Text>
+          <Text>{this.state.progress}</Text>
+          <Button title='googleLogin' onPress={googleLogin} />
+          <TextInput
+            placeholder='電話'
+            style={{ height: 40 }}
+            onChangeText={(text) => this.setState({ phoneText: text })}
+            value={this.state.phoneText}
+          />
+          <Button title='SMSLogin' onPress={() => smsLogin(this.state.phoneText)} />
+          <TextInput
+            placeholder='請輸入'
+            style={{ height: 40 }}
+            onChangeText={(text) => this.setState({ confirmText: text })}
+            value={this.state.confirmText}
+          />
+          <Button title='set Confirm Code' onPress={() => setConfirm(this.state.confirmText)} />
+        </SafeAreaView>
+      </>
     )
   }
 }
