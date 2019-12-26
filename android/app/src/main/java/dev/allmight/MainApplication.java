@@ -16,6 +16,7 @@ import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage; 
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
