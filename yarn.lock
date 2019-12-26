@@ -838,7 +838,7 @@
   resolved "https://registry.npm.taobao.org/@react-native-community/netinfo/download/@react-native-community/netinfo-5.0.1.tgz#e3486374d7319bf7f9027648fd6fb5715c0b168f"
   integrity sha1-40hjdNcxm/f5AnZI/W+1cVwLFo8=
 
-"@react-native-community/push-notification-ios@^1.0.1":
+"@react-native-community/push-notification-ios@^1.0.1", "@react-native-community/push-notification-ios@^1.0.3":
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/@react-native-community/push-notification-ios/download/@react-native-community/push-notification-ios-1.0.3.tgz#cd2c7f29aeeb431942eda0bd729738fd2b444ae9"
   integrity sha1-zSx/Ka7rQxlC7aC9cpc4/StESuk=

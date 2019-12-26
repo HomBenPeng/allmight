@@ -13,7 +13,8 @@ import Beacons from 'react-native-beacons-manager'
 import { GoogleSignin } from 'react-native-google-signin'
 import firebase from 'react-native-firebase'
 import SplashScreen from 'react-native-splash-screen'
-
+import PushNotificationAndroid from 'react-native-push-notification'
+import PushNotificationIOS from '@react-native-community/push-notification-ios'
 async function googleLogin () {
   try {
     // add any configuration settings here:
@@ -170,8 +171,17 @@ class App extends Component {
         notification.android.setChannelId('insider').setSound('default')
         firebase.notifications().displayNotification(notification)
         const { title, body } = notification
-        console.log('title: ' + title)
-        console.log('body: ' + body)
+        if (Platform.OS === 'android') {
+          PushNotificationAndroid.localNotification({
+          title: title,
+          message: body
+        })
+        } else {
+          PushNotificationIOS.presentLocalNotification({
+            alertTitle: title,
+            alertBody: body // (required)
+          })
+        }
       })
     }
     if (!this.messagingEnabled) {
