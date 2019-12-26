@@ -180,6 +180,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-splash-screen')
     implementation project(':react-native-bluetooth-status')
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation fileTree(dir: "libs", include: ["*.jar"])

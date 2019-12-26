@@ -12,6 +12,7 @@ import codePush from 'react-native-code-push'
 import Beacons from 'react-native-beacons-manager'
 import { GoogleSignin } from 'react-native-google-signin'
 import firebase from 'react-native-firebase'
+import SplashScreen from 'react-native-splash-screen'
 
 async function googleLogin () {
   try {
@@ -184,6 +185,7 @@ class App extends Component {
         console.log('User has rejected permissions')
       }
     }
+    SplashScreen.hide()
   }
 
   checkLocationPermission = async () => {
